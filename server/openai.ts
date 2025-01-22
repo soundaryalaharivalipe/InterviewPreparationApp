@@ -32,7 +32,7 @@ interface AnswerAnalysis {
 
 export async function generateTechnicalQuestion(topic: string, difficulty: string): Promise<TechnicalQuestion> {
   const response = await openai.chat.completions.create({
-    model: "gpt-4o",
+    model: "gpt-3.5-turbo",
     messages: [
       {
         role: "system",
@@ -51,7 +51,7 @@ export async function generateTechnicalQuestion(topic: string, difficulty: strin
 
 export async function generateBehavioralQuestion(previousQuestions: string[] = []): Promise<BehavioralQuestion> {
   const response = await openai.chat.completions.create({
-    model: "gpt-4o",
+    model: "gpt-3.5-turbo",
     messages: [
       {
         role: "system",
@@ -70,7 +70,7 @@ export async function generateBehavioralQuestion(previousQuestions: string[] = [
 
 export async function analyzeBehavioralAnswer(question: string, answer: string): Promise<AnswerAnalysis> {
   const response = await openai.chat.completions.create({
-    model: "gpt-4o",
+    model: "gpt-3.5-turbo",
     messages: [
       {
         role: "system",

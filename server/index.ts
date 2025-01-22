@@ -7,6 +7,18 @@ import { setupVite, serveStatic, log } from "./vite";
 import path from "path";
 import { fileURLToPath } from "url";
 
+
+import dotenv from 'dotenv';
+dotenv.config();
+
+console.log('Loaded ENV Variables:', process.env);
+if (!process.env.OPENAI_API_KEY) {
+    throw new Error('OPENAI_API_KEY is missing or not loaded.');
+}
+
+
+
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
