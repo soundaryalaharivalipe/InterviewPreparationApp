@@ -12,7 +12,7 @@ import OpenAI from "openai";
 var openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 async function generateTechnicalQuestion(topic, difficulty) {
   const response = await openai.chat.completions.create({
-    model: "gpt-4o",
+    model: "gpt-3.5-turbo",
     messages: [
       {
         role: "system",
@@ -29,7 +29,7 @@ async function generateTechnicalQuestion(topic, difficulty) {
 }
 async function generateBehavioralQuestion(previousQuestions = []) {
   const response = await openai.chat.completions.create({
-    model: "gpt-4o",
+    model: "gpt-3.5-turbo",
     messages: [
       {
         role: "system",
@@ -46,7 +46,7 @@ async function generateBehavioralQuestion(previousQuestions = []) {
 }
 async function analyzeBehavioralAnswer(question, answer) {
   const response = await openai.chat.completions.create({
-    model: "gpt-4o",
+    model: "gpt-3.5-turbo",
     messages: [
       {
         role: "system",
