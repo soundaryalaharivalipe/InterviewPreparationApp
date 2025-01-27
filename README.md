@@ -1,5 +1,7 @@
 # AI-Powered Interview Preparation Platform
 
+Live Demo: https://soundarya-interviewpreparationapp.onrender.com
+
 An advanced interview preparation platform that helps job seekers excel in their interviews through intelligent, interactive learning modules and real-time feedback.
 
 ## Features
